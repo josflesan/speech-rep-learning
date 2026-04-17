@@ -4,12 +4,12 @@ This repository contains the codebase and implementation for my BSc thesis proje
 
 <div align="center">
   <figure>
-    <img src="assets/stochastic_depth.png" width="400"/>
+    <img src="assets/stochastic_depth.png"/>
     <figcaption><em>Figure 1: Stochastic Depth Linear Decay as proposed by Huang et al. We use a hyperparameter with a linear decay schedule to preserve earlier layers with higher likelihood</em></figcaption>
   </figure>
-
+  <br/><br/>
   <figure>
-    <img src="assets/fractal_architecture.png" width="400"/>
+    <img src="assets/fractal_architecture.png"/>
     <figcaption><em>Figure 2: Fractal Architecture proposed by Zhang et al. The macro-architecture uses convolution (transformer encoders in our work) blocks as units that get joined and pooled together before making a prediction</em></figcaption>
   </figure>
 </div>
@@ -60,10 +60,12 @@ python src/train.py --config config.json --type "fractal-lstm" --layers 4 --hidd
 
 <div align="center">
   <figure>
-    <img src="assets/per.png" width="400"/>
+    <img src="assets/per.png"/>
     <figcaption><em>Figure 3: Layer-wise phone-error rates for baseline, stochastic and fractal transformer encoder. We can see that the fractal transformer's performance is practically identical to the baseline, while stochastic depth performs slightly worse when including later layers</em></figcaption>
   </figure>
 </div>
+
+<br/>
 
 These results demonstrate that dynamic architectures can make self-supervised speech models more efficient without sacrificing useful representations.
 
