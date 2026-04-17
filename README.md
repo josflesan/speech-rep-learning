@@ -3,12 +3,12 @@
 This repository contains the codebase and implementation for my BSc thesis project (under [Dr. Hao Tang](https://homepages.inf.ed.ac.uk/htang2/)) on self-supervised speech representation learning, following the Autoregressive Predictive Coding (APC) framework. The code explores how dynamic neural architectures originally proposed for ResNet affect the pretraining dynamics in the speech domain and how useful the learned representations remain for downstream speech tasks such as phone recognition, speaker identification and automatic speech recognition (ASR). In particular, this project explores Stochastic Depth networks ([Huang et al., 2016](https://arxiv.org/abs/1603.09382)) and Fractal Architectures ([Zhang et al., 2020](https://arxiv.org/abs/1605.07648)) on both LSTM and Transformer backbones.
 
 <div align="center">
-  <figure style="display: inline-block; margin: 10px;">
+  <figure>
     <img src="assets/stochastic_depth.png" width="400"/>
     <figcaption><em>Figure 1: Stochastic Depth Linear Decay as proposed by Huang et al. We use a hyperparameter with a linear decay schedule to preserve earlier layers with higher likelihood</em></figcaption>
   </figure>
 
-  <figure style="display: inline-block; margin: 10px;">
+  <figure>
     <img src="assets/fractal_architecture.png" width="400"/>
     <figcaption><em>Figure 2: Fractal Architecture proposed by Zhang et al. The macro-architecture uses convolution (transformer encoders in our work) blocks as units that get joined and pooled together before making a prediction</em></figcaption>
   </figure>
@@ -59,7 +59,7 @@ python src/train.py --config config.json --type "fractal-lstm" --layers 4 --hidd
 - Downstream performance remains **largely unchanged** despite faster training 
 
 <div align="center">
-  <figure style="display: inline-block; margin: 10px;">
+  <figure>
     <img src="assets/per.png" width="400"/>
     <figcaption><em>Figure 3: Layer-wise phone-error rates for baseline, stochastic and fractal transformer encoder. We can see that the fractal transformer's performance is practically identical to the baseline, while stochastic depth performs slightly worse when including later layers</em></figcaption>
   </figure>
