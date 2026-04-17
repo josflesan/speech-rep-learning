@@ -1,4 +1,4 @@
-# Speech Representation Learning
+# Dynamic Neural Architectures for Efficient Self-Supervised Speech Representation Learning
 
 This repository contains the codebase and implementation for my BSc thesis project (under [Dr. Hao Tang](https://homepages.inf.ed.ac.uk/htang2/)) on self-supervised speech representation learning, following the Autoregressive Predictive Coding (APC) framework. The code explores how dynamic neural architectures originally proposed for ResNet affect the pretraining dynamics in the speech domain and how useful the learned representations remain for downstream speech tasks such as phone recognition, speaker identification and automatic speech recognition (ASR). In particular, this project explores Stochastic Depth networks ([Huang et al., 2016](https://arxiv.org/abs/1603.09382)) and Fractal Architectures ([Zhang et al., 2020](https://arxiv.org/abs/1605.07648)) on both LSTM and Transformer backbones.
 
